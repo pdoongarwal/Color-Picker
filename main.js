@@ -5,9 +5,11 @@ var str;
 var code;
 $(document).ready(function(){
   	$(document).mousemove(function(e){
-	    //$('#spnCursor').html("X Axis : " + event.pageX + " Y Axis : " + event.pageY);
-	    x = event.pageX/4;
-	    y = event.pageY/2;
+	 	X_ratio = ($(window).width()-50)/255;
+	 	Y_ratio = ($(window).height()-50)/255;
+	    x = Math.round(event.pageX/X_ratio);
+	    y = Math.round(event.pageY/Y_ratio);
+
 	    update();
 	});
 
