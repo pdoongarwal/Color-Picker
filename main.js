@@ -5,7 +5,6 @@ var str;
 var code;
 
 var extra = function(clicked_id) {
-	console.log(clicked_id);
 	id = "#" + clicked_id;
 	$(document).mousemove(function(e){
 		X_ratio = ($(window).width()-50)/255;
