@@ -38,12 +38,14 @@ var extra = function() {
 
 	var update = function() {
 		str = "rgb(" + x + ", " + y + ", " + z + ")";
+	    $("#spnCursor2").css("background-color", str);
 	    $("body").css("background-color", str);
 	    $('#spnCursor').html(str);
 	}
 }
 
-$(document).dblclick(function(){
+$(this).dblclick(function(){
+	console.log(this.id);
   	extra();
 });
 
