@@ -46,4 +46,33 @@ var extra = function(clicked_id) {
 
 $(document).dblclick(function(){
 });
+document.addEventListener('keydown', function(event) {
+    if(event.keyCode == "49") {
+        document.getElementById("fontChange").style.fontFamily= "monospace";
+    }
+    if(event.keyCode == "50") {
+        document.getElementById("fontChange").style.fontFamily= "arial";
+    }
+    if(event.keyCode == "51") {
+        document.getElementById("fontChange").style.fontFamily= "courier";
+    }
+    if(event.keyCode == "52") {
+        document.getElementById("fontChange").style.fontFamily= "cursive";
+    }
+    if(event.keyCode == "53") {
+        document.getElementById("fontChange").style.fontFamily= "fantasy";
+    }
+    if(event.keyCode == "54") {
+        document.getElementById("fontChange").style.fontFamily= "serif";
+    }
+    if(event.keyCode == "55") {
+        document.getElementById("fontChange").style.fontFamily= "sans-serif";
+    }
+    if(event.keyCode == "56") {
+        document.getElementById("fontChange").style.fontFamily= "times";
+    }
+    if(event.keyCode == "57") {
+        document.getElementById("fontChange").style.fontFamily= "tahoma";
+    }
+});
 
