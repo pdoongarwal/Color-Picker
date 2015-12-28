@@ -1,5 +1,11 @@
 #spnCursor2{
 	background-color: black;
-    height:500px;
-    width:500px;
+    height:250px;
+    width:250px;
+}
+
+#spnCursor3{
+	background-color: yellow;
+    height:250px;
+    width:250px;
 }

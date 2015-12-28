@@ -4,7 +4,9 @@ var z=0;
 var str;
 var code;
 
-var extra = function() {
+var extra = function(clicked_id) {
+	console.log(clicked_id);
+	id = "#" + clicked_id;
 	$(document).mousemove(function(e){
 		X_ratio = ($(window).width()-50)/255;
 		Y_ratio = ($(window).height()-50)/255;
@@ -38,14 +40,11 @@ var extra = function() {
 
 	var update = function() {
 		str = "rgb(" + x + ", " + y + ", " + z + ")";
-	    $("#spnCursor2").css("background-color", str);
-	    $("body").css("background-color", str);
+	    $(id).css("background-color", str);
 	    $('#spnCursor').html(str);
 	}
 }
 
-$(this).dblclick(function(){
-	console.log(this.id);
-  	extra();
+$(document).dblclick(function(){
 });
 
