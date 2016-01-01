@@ -5,10 +5,10 @@ var str;
 var code;
 var ctrlkey = -1;
 var size = 16;
+
 var extra = function(clicked_id) {
 	id = "#" + clicked_id;
-	console.log(1);
-	$(document).keydown(function(){
+	$(document).keydown(function(event){
 	 	if(event.keyCode == "66"){
 	 		bgcolor(clicked_id);
 	 	}
@@ -56,17 +56,14 @@ var extra = function(clicked_id) {
 	  	
 	});
 }
-var bgcolor = function(id){
-	console.log(2);
+
+var bgcolor = function(id) {
 	color(id);
-
-
-
 }
-var color = function(id){
-	console.log(3);
-	$(document).mousemove(function(e)
-	{
+
+var color = function(id) {
+	$(document).mousemove(function(event) {
+
 		X_ratio = ($(window).width()-50)/255;
 		Y_ratio = ($(window).height()-50)/255;
 		x = Math.round(event.pageX/X_ratio);
@@ -75,8 +72,7 @@ var color = function(id){
 		changeBg(id);
 	});
 
-	$(document).keydown(function() 
-	{
+	$(document).keydown(function(event) {
 	  	code = event.keyCode || event.which;
 	 	if(code === 38 && z<251) { //Enter keycode
 	   		z=z+5;
@@ -96,15 +92,17 @@ var color = function(id){
 	 	}	
 	 	changeBg(id);
 	});
-	var changeBg = function(id){
-	str = "rgb(" + x + ", " + y + ", " + z + ")"
-	 document.getElementById(id).style.backgroundColor=str;
-	$('#spnCursor').html(str);
-}
+	
+	var changeBg = function(id) {
+		str = "rgb(" + x + ", " + y + ", " + z + ")"
+		 document.getElementById(id).style.backgroundColor=str;
+		$('#spnCursor').html(str);
+	}
 }
 var bgFont = function(id){
-		$(document).mousemove(function(e)
-	{
+	
+	$(document).mousemove(function(e) {
+	
 		X_ratio = ($(window).width()-50)/255;
 		Y_ratio = ($(window).height()-50)/255;
 		x = Math.round(event.pageX/X_ratio);
@@ -113,8 +111,8 @@ var bgFont = function(id){
 		changeFc(id);
 	});
 
-	$(document).keydown(function() 
-	{
+	
+	$(document).keydown(function() {
 	  	code = event.keyCode || event.which;
 	 	if(code === 38 && z<251) { //Enter keycode
 	   		z=z+5;
@@ -134,11 +132,12 @@ var bgFont = function(id){
 	 	}	
 	 	changeFc(id);
 	});
-	var changeFc = function(id){
-	str = "rgb(" + x + ", " + y + ", " + z + ")"
-	 document.getElementById(id).style.color=str;
-	$('#spnCursor').html(str);
-}
+	
+	var changeFc = function(id) {
+		str = "rgb(" + x + ", " + y + ", " + z + ")"
+		 document.getElementById(id).style.color=str;
+		$('#spnCursor').html(str);
+	}
 }
 
 
