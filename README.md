@@ -1,5 +1,7 @@
 # Color-Picker
-A library for choosing Background color, Font styles, Font color and Font size for different sections of a webpage directly in browser
+#####A library for choosing Background color, Font styles, Font color and Font size for different sections of a webpage directly in browser.
+
+#####Supported in all Browsers
 ###How To Use
 - Include Onclick="this.id" in your elements you wish to Change attributes for,
 - Open Your Browser
