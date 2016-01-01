@@ -1,12 +1,14 @@
 # Color-Picker
-A library for choosing background colors and Font styles,color,size  for different sections of a webpage directly in browser
+A library for choosing Background color, Font styles, Font color and Font size for different sections of a webpage directly in browser
 ###How To Use
-- Include Onclick="this.id" in your Divs you wish to Change
+- Include Onclick="this.id" in your elements you wish to Change attributes for,
 - Open Your Browser
-- Click the Div 
-  - For Changing the Font Size in Your Div Use  '+'  and  '-'.
+- Click the Elements/Div to change its attributes 
+  - For Changing the Font Size Use  '+'  and  '-'.
   - For Changing Style of font use Keys 1-9 for different font styles.
   - Press "B" for Changing Bacground Color
+    - Color is varied By moving the Cursor which vary Red and Green in rgb.
+    - For Blue use left and right Keys.
   - Press "F" for Changing Font color
     - Color is varied By moving the Cursor which vary Red and Green in rgb.
     - For Blue use left and right Keys.
