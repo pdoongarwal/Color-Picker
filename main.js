@@ -8,7 +8,7 @@ var size = 16;
 var extra = function(clicked_id) {
 	id = "#" + clicked_id;
 	console.log(1);
-	$(document).keydown(function(){
+	$(document).keydown(function(event){
 	 	if(event.keyCode == "66"){
 	 		bgcolor(clicked_id);
 	 	}
@@ -65,7 +65,7 @@ var bgcolor = function(id){
 }
 var color = function(id){
 	console.log(3);
-	$(document).mousemove(function(e)
+	$(document).mousemove(function(event)
 	{
 		X_ratio = ($(window).width()-50)/255;
 		Y_ratio = ($(window).height()-50)/255;
@@ -75,7 +75,7 @@ var color = function(id){
 		changeBg(id);
 	});
 
-	$(document).keydown(function() 
+	$(document).keydown(function(event) 
 	{
 	  	code = event.keyCode || event.which;
 	 	if(code === 38 && z<251) { //Enter keycode
@@ -103,7 +103,7 @@ var color = function(id){
 }
 }
 var bgFont = function(id){
-		$(document).mousemove(function(e)
+		$(document).mousemove(function(event)
 	{
 		X_ratio = ($(window).width()-50)/255;
 		Y_ratio = ($(window).height()-50)/255;
@@ -113,7 +113,7 @@ var bgFont = function(id){
 		changeFc(id);
 	});
 
-	$(document).keydown(function() 
+	$(document).keydown(function(event) 
 	{
 	  	code = event.keyCode || event.which;
 	 	if(code === 38 && z<251) { //Enter keycode
