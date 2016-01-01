@@ -13,3 +13,7 @@ A library for choosing Background color, Font styles, Font color and Font size f
     - Color is varied By moving the Cursor which vary Red and Green in rgb.
     - For Blue use left and right Keys.
 - For saving Changes Press ENTER key
+
+###Note
+
+- Changes aren't permanent when you Refresh the Code.
