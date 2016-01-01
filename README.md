@@ -19,3 +19,5 @@
 ###Note
 
 - Changes aren't permanent when you Refresh the Code.
+- Works best in Chrome
+- Minor Bug Fixes needed for firefox
