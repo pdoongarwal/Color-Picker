@@ -5,13 +5,9 @@ var str;
 var code;
 var ctrlkey = -1;
 var size = 16;
-
 var extra = function(clicked_id) {
 	id = "#" + clicked_id;
-<<<<<<< HEAD
 	console.log(1);
-=======
->>>>>>> 5546c46047a1cda6471654900cc36856cba71c5d
 	$(document).keydown(function(event){
 	 	if(event.keyCode == "66"){
 	 		bgcolor(clicked_id);
@@ -60,22 +56,17 @@ var extra = function(clicked_id) {
 	  	
 	});
 }
-
-var bgcolor = function(id) {
+var bgcolor = function(id){
+	console.log(2);
 	color(id);
-}
 
-var color = function(id) {
-	$(document).mousemove(function(event) {
 
-<<<<<<< HEAD
+
 }
 var color = function(id){
 	console.log(3);
 	$(document).mousemove(function(event)
 	{
-=======
->>>>>>> 5546c46047a1cda6471654900cc36856cba71c5d
 		X_ratio = ($(window).width()-50)/255;
 		Y_ratio = ($(window).height()-50)/255;
 		x = Math.round(event.pageX/X_ratio);
@@ -84,12 +75,8 @@ var color = function(id){
 		changeBg(id);
 	});
 
-<<<<<<< HEAD
 	$(document).keydown(function(event) 
 	{
-=======
-	$(document).keydown(function(event) {
->>>>>>> 5546c46047a1cda6471654900cc36856cba71c5d
 	  	code = event.keyCode || event.which;
 	 	if(code === 38 && z<251) { //Enter keycode
 	   		z=z+5;
@@ -109,22 +96,15 @@ var color = function(id){
 	 	}	
 	 	changeBg(id);
 	});
-	
-	var changeBg = function(id) {
-		str = "rgb(" + x + ", " + y + ", " + z + ")"
-		 document.getElementById(id).style.backgroundColor=str;
-		$('#spnCursor').html(str);
-	}
+	var changeBg = function(id){
+	str = "rgb(" + x + ", " + y + ", " + z + ")"
+	 document.getElementById(id).style.backgroundColor=str;
+	$('#spnCursor').html(str);
+}
 }
 var bgFont = function(id){
-<<<<<<< HEAD
 		$(document).mousemove(function(event)
 	{
-=======
-	
-	$(document).mousemove(function(e) {
-	
->>>>>>> 5546c46047a1cda6471654900cc36856cba71c5d
 		X_ratio = ($(window).width()-50)/255;
 		Y_ratio = ($(window).height()-50)/255;
 		x = Math.round(event.pageX/X_ratio);
@@ -133,13 +113,8 @@ var bgFont = function(id){
 		changeFc(id);
 	});
 
-<<<<<<< HEAD
 	$(document).keydown(function(event) 
 	{
-=======
-	
-	$(document).keydown(function() {
->>>>>>> 5546c46047a1cda6471654900cc36856cba71c5d
 	  	code = event.keyCode || event.which;
 	 	if(code === 38 && z<251) { //Enter keycode
 	   		z=z+5;
@@ -159,12 +134,11 @@ var bgFont = function(id){
 	 	}	
 	 	changeFc(id);
 	});
-	
-	var changeFc = function(id) {
-		str = "rgb(" + x + ", " + y + ", " + z + ")"
-		 document.getElementById(id).style.color=str;
-		$('#spnCursor').html(str);
-	}
+	var changeFc = function(id){
+	str = "rgb(" + x + ", " + y + ", " + z + ")"
+	 document.getElementById(id).style.color=str;
+	$('#spnCursor').html(str);
+}
 }
 
 
