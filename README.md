@@ -20,4 +20,3 @@
 
 - Changes aren't permanent when you Refresh the Code.
 - Works best for Chrome
-- Minor Bug Fixes needed for firefox
