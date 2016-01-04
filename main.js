@@ -7,7 +7,7 @@ var ctrlkey = -1;
 var size = 16;
 var extra = function(clicked_id) {
 	id = "#" + clicked_id;
-	console.log(1);
+	//console.log(1);
 	$(document).keydown(function(event){
 	 	if(event.keyCode == "66"){
 	 		bgcolor(clicked_id);
@@ -46,25 +46,31 @@ var extra = function(clicked_id) {
 
         if(event.keyCode == "109"){
         		size = size - 1;
-        		 document.getElementById(clicked_id).style.fontSize=size.toString();
+        		str_size = size + "px"
+        		$( id ).css({
+			      "fontSize": str_size
+			    });
 	 	}
 	 	if(event.keyCode == "107") {
         		size = size + 1;
-        		 document.getElementById(clicked_id).style.fontSize=size.toString();
+        		str_size = size + "px"
+        		$( id ).css({
+			      "fontSize": str_size
+			    });
 	 	}
 
 	  	
 	});
 }
 var bgcolor = function(id){
-	console.log(2);
+	//console.log(2);
 	color(id);
 
 
 
 }
 var color = function(id){
-	console.log(3);
+	//console.log(3);
 	$(document).mousemove(function(event)
 	{
 		X_ratio = ($(window).width()-50)/255;
@@ -140,22 +146,3 @@ var bgFont = function(id){
 	$('#spnCursor').html(str);
 }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
