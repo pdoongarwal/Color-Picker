@@ -6,52 +6,64 @@ var code;
 var ctrlkey = -1;
 var size = 16;
 var extra = function(clicked_id) {
+	console.log('hell');
 	id = "#" + clicked_id;
-	//console.log(1);
 	$(document).keydown(function(event){
-	 	if(event.keyCode == "66"){
-	 		bgcolor(clicked_id);
+	 	if(event.keyCode === 66){
+	 		returnCode = bgcolor(clicked_id);
+	 		if (returnCode===0) {
+	 			console.log(typeof(event.keyCode));
+	 			return 0;
+	 		}
+	 		
 	 	}
-	 	if(event.keyCode == "70"){
-	 		bgFont(clicked_id);
+	 	if(event.keyCode === 70){
+	 		returnCode = fontStyle(clicked_id);
+	 		if (returnCode===0) {
+	 			console.log(typeof(event.keyCode));
+	 			return 0;
+	 		}
 	 	}
-	 	
-	 	if(event.keyCode == "49") {
+	 	if(event.keyCode === 27){
+	 		console.log(event.keyCode);
+	 		return 0;
+	 	}
+	 	if(event.keyCode === 49) {
                 document.getElementById(clicked_id).style.fontFamily= "monospace";
         }
-        if(event.keyCode == "50") {
+        if(event.keyCode === 50) {
                 document.getElementById(clicked_id).style.fontFamily= "arial";
         }
-        if(event.keyCode == "51") {
+        if(event.keyCode === 51) {
                 document.getElementById(clicked_id).style.fontFamily= "courier";
         }
-        if(event.keyCode == "52") {
+        if(event.keyCode === 52) {
                 document.getElementById(clicked_id).style.fontFamily= "cursive";
         }
-        if(event.keyCode == "53") {
+        if(event.keyCode === 53) {
                 document.getElementById(clicked_id).style.fontFamily= "fantasy";
         }
-        if(event.keyCode == "54") {
+        if(event.keyCode === 54) {
                 document.getElementById(clicked_id).style.fontFamily= "serif";
         }
-        if(event.keyCode == "55") {
+        if(event.keyCode === 55) {
                 document.getElementById(clicked_id).style.fontFamily= "sans-serif";
         }
-        if(event.keyCode == "56") {
+        if(event.keyCode === 56) {
                 document.getElementById(clicked_id).style.fontFamily= "times";
         }
-        if(event.keyCode == "57") {
+        if(event.keyCode === 57) {
                 document.getElementById(clicked_id).style.fontFamily= "tahoma";
         }
 
-        if(event.keyCode == "109"){
+        if(event.keyCode === 109){
         		size = size - 1;
         		str_size = size + "px"
         		$( id ).css({
 			      "fontSize": str_size
 			    });
 	 	}
-	 	if(event.keyCode == "107") {
+	 	if(event.keyCode === 107) {
         		size = size + 1;
         		str_size = size + "px"
         		$( id ).css({
@@ -63,20 +75,17 @@ var extra = function(clicked_id) {
 	});
 }
 var bgcolor = function(id){
-	//console.log(2);
-	color(id);
-
-
-
-}
-var color = function(id){
-	//console.log(3);
 	$(document).mousemove(function(event)
 	{
 		X_ratio = ($(window).width()-50)/255;
 		Y_ratio = ($(window).height()-50)/255;
 		x = Math.round(event.pageX/X_ratio);
 		y = Math.round(event.pageY/Y_ratio);
+
+		if(event.keyCode === 27){
+	 		console.log(event.keyCode);
+	 		return 0;
+	 	}
 
 		changeBg(id);
 	});
@@ -103,18 +112,24 @@ var color = function(id){
 	 	changeBg(id);
 	});
 	var changeBg = function(id){
-	str = "rgb(" + x + ", " + y + ", " + z + ")"
-	 document.getElementById(id).style.backgroundColor=str;
-	$('#spnCursor').html(str);
+		str = "rgb(" + x + ", " + y + ", " + z + ")"
+		document.getElementById(id).style.backgroundColor=str;
+		$('#spnCursor').html(str);
+	}
 }
-}
-var bgFont = function(id){
+
+var fontStyle = function(id){
 		$(document).mousemove(function(event)
 	{
 		X_ratio = ($(window).width()-50)/255;
 		Y_ratio = ($(window).height()-50)/255;
 		x = Math.round(event.pageX/X_ratio);
 		y = Math.round(event.pageY/Y_ratio);
+
+		if(event.keyCode === 27){
+	 		console.log(event.keyCode);
+	 		return 0;
+	 	}
 
 		changeFc(id);
 	});
@@ -126,7 +141,7 @@ var bgFont = function(id){
 	   		z=z+5;
 	 	}
 	 	if(code === 39 && z<255) { //Enter keycode
-	   		z++
+	   		z++;
 	 	}
 	 	if(code === 40 && z>4) { //Enter keycode
 	   		z=z-5;
@@ -141,8 +156,8 @@ var bgFont = function(id){
 	 	changeFc(id);
 	});
 	var changeFc = function(id){
-	str = "rgb(" + x + ", " + y + ", " + z + ")"
-	 document.getElementById(id).style.color=str;
-	$('#spnCursor').html(str);
-}
+		str = "rgb(" + x + ", " + y + ", " + z + ")"
+		 document.getElementById(id).style.color=str;
+		$('#spnCursor').html(str);
+	}
 }
